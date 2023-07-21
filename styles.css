@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  font-size: 16px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+main {
+  min-height: 100vh;
+  display: grid;
+  gap: 1.5rem;
+  background: hsl(210, 46%, 95%);
+}
+.container {
+  margin-inline: 1rem;
+  border-radius: 20px;
+  padding: 1rem 3rem;
+}
+.first {
+  position: relative;
+  background: hsl(263, 55%, 52%);
+}
+.sec {
+  background: hsl(217, 19%, 35%);
+}
+.third,
+.fifth {
+  background: hsl(0, 0%, 100%);
+  color: hsl(217, 19%, 35%);
+}
+.third .verified,
+.fifth .verified {
+  color: hsla(217, 19%, 35%, 0.5);
+}
+.third .two,
+.fifth .two {
+  color: hsla(217, 19%, 35%, 0.7);
+}
+
+.forth {
+  background: hsl(219, 29%, 14%);
+}
+.first,
+.sec,
+.forth {
+  color: hsl(0, 0%, 100%);
+}
+.first .verified,
+.sec .verified,
+.forth .verified {
+  color: hsla(0, 0%, 100%, 0.5);
+}
+.first .two,
+.sec .two,
+.forth .two {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+.header .hero {
+  border-radius: 50%;
+  margin-right: 2rem;
+}
+
+.one {
+  margin: 0 0 1rem 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+.two {
+  margin-bottom: 2rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  body {
+    background: hsl(0, 0%, 81%);
+  }
+  main {
+    padding-block: 2rem;
+    grid-auto-columns: 1fr;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .container {
+    border-radius: 10px;
+  }
+  .span-2 {
+    grid-column: span 2;
+  }
+  .fifth {
+    grid-column-start: 4;
+    grid-row: 1 / 3;
+  }
+}
